@@ -2,4 +2,89 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color);
+}
+
+.header {
+  display: grid;
+
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.decorated-zone {
+  padding: 0 10px;
+}
+
+.header__decor-element {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.header__decor-element:after {
+  content: 'REC';
+  position: absolute;
+  right: 38px;
+  top: 15px
+}
+
+.header__decor-element:before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  filter: blur(3px);
+  right: 19px;
+  top: 18px
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: end;
+  margin-block-start: 75px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-item{
+  background-color: transparent;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  padding: 1,5px 13px;
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active{
+  border: var(--accent-color) solid 1px;
+}
+
+.header__title {
+  justify-self: start;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  line-height: 96px;
+  font-weight: 700;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-block-start: 65px;
+}
+
+.title-decor {
+  color: var(--text-negativ-color);
+  max-width: 364px;
+  background-color: var(--accent-color);
+  justify-self: end;
+  font-weight: 700;
+  line-height: 23px;
+  margin-block-start: 65px;
+  margin-block-end: 55px;
 }
