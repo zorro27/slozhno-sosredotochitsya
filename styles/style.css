@@ -3,48 +3,78 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header {
   display: grid;
-
-  background-image: url(../images/cover-image-dark.png);
-  background-position: center;
-  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.decorated-zone {
-  padding: 0 10px;
+.decorated-zone::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  height: 25px;
+  width: 25px;
+
+  border-inline-start: var(--accent-color) 1px solid;
+  border-block-end: var(--accent-color) 1px solid;
+}
+
+.decorated-zone::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  height: 25px;
+  width: 25px;
+
+  border-inline-end: var(--accent-color) 1px solid;
+  border-block-start: var(--accent-color) 1px solid;
 }
 
 .header__decor-element {
-  position: relative;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   color: var(--accent-color);
 }
 
-.header__decor-element:after {
-  content: 'REC';
-  position: absolute;
-  right: 38px;
-  top: 15px
-}
-
-.header__decor-element:before {
+.header__decor-element::after {
+  display: block;
   content: '';
-  position: absolute;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--accent-color);
-  filter: blur(3px);
-  right: 19px;
-  top: 18px
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .header__theme-menu {
   display: grid;
   justify-content: end;
-  margin-block-start: 75px;
+  margin-block-start: 65px;
 }
 
 .header__theme-menu-list {
@@ -54,14 +84,16 @@
 
 .header__theme-menu-item{
   background-color: transparent;
+  text-align: center;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
-  padding: 1,5px 13px;
+  padding: 1.5px 13px;
   border: none;
   color: var(--accent-color);
   text-transform: lowercase;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active{
@@ -78,13 +110,99 @@
   margin-block-start: 65px;
 }
 
-.title-decor {
-  color: var(--text-negativ-color);
-  max-width: 364px;
-  background-color: var(--accent-color);
-  justify-self: end;
-  font-weight: 700;
-  line-height: 23px;
-  margin-block-start: 65px;
+.header__subtitle {
+  margin-block-start: 55px;
   margin-block-end: 55px;
 }
+
+.title-decor {
+  color: var(--text-negativ-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  height: min-content;
+  align-self: center;
+  width: 100%;
+}
+
+.main{
+  padding-top: 40px;
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  display: grid;
+  gap: 20px;
+}
+
+.card__title {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+}
+
+.card__item {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.card__item-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card__item-text{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+}
+
+.title-decor-light{
+  color: var(--text-negativ-color);
+  background-color: var(--accent-color);
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 23px;
+}
+
+.picture-gallery{
+  padding-block-end: 40px;
+}
+
+.image-gallery{
+  display: grid;
+  gap: 10px;
+  padding-block-start: 10px;
+}
+
+
+.image-gallery img {
+  display: grid;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.footer {
+  position: relative;
+  align-content: center;
+  text-align: center;
+  display: grid;
+  min-block-size: 668px;
+}
+
+.caption {
+  color: #DB00FF;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+
