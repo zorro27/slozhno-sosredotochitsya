@@ -3,9 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
-  --accent-color: #FF0070;
+  --decor__element-color: #FF0070;
+  --title-color:  #DB00FF;
+  --accent-color: hsl(334, 100%, 50%);
+  --section-color: #FF0070;
+  --color__shadow: #FF0070;
   --text-color: #F1B2CE;
   --text-negativ-color: #000028;
   --background-color: #000028;
-  --outline-color: 1px solid rgba(255, 0, 112, 0.40)
+  --outline-color: 1px solid rgba(255, 0, 112, 0.40);
+  --rec-color: #FF0070;
+  --background-image: url(../images/cover-image-dark.png);
+  --menu__button-color: #FF0070;
 }

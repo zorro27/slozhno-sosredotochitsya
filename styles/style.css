@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -33,7 +33,7 @@
   right: 0px;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decor__element-color);
   border-width: 1px 1px 0 0; 
 }
 
@@ -44,7 +44,7 @@
   left: 1px;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decor__element-color);
   border-width: 0 0 1px 1px;
 }
 
@@ -58,7 +58,7 @@
 .header__decor-element::before {
   content: 'rec';
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--rec-color);
   line-height: 25px;
 }
 
@@ -66,9 +66,9 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  color: var(--accent-color);
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  color: var(--rec-color);
+  background-color: var(--rec-color);
+  box-shadow: 0 0 4px 2px var(--rec-color);
   inset-block-start: 8px;
   inset-inline-end: -20px;
   inline-size: 9px;
@@ -88,7 +88,7 @@
   justify-content: center;
 }
 
-.header__theme-menu-item{
+.header__theme-menu-item { 
   background-color: transparent;
   font-weight: 400;
 }
@@ -98,13 +98,13 @@
   padding: 0 13px 1.5px;
   border: none;
   outline: none;
-  color: var(--accent-color);
+  color:  var(--menu__button-color);
   text-transform: lowercase;
   cursor: pointer;
 }
 
-.header__theme-menu-button_active{
-  border: var(--accent-color) solid 1px;
+.header__theme-menu-button_active {
+  border: var(--menu__button-color) solid 1px;
   pointer-events: none;
 }
 
@@ -112,7 +112,7 @@
   outline: var(--outline-color);
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid currentColor;
 }
 
@@ -121,8 +121,8 @@
   font-size: 157px;
   line-height: 129.53px;
   font-weight: 700;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--color__shadow);
   margin-block-start: 273px;
   margin-inline-start: -15px;
 }
@@ -155,7 +155,7 @@
   gap: 20px;
 }
 
-.card__item{
+.card__item {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -169,7 +169,7 @@
 }
 
 .card__title {
-  color: var(--accent-color);
+  color: var(--section-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
@@ -199,11 +199,11 @@
   max-width: 315px;
 }
 
-.card > .card__title{
+.card > .card__title {
   grid-row: span 2;
 }
  
-.title-decor-light{
+.title-decor-light {
   color: var(--text-negativ-color);
   background-color: var(--accent-color);
   font-family: IBM Plex Mono;
@@ -230,7 +230,7 @@
   padding-block-end: 60px;
 }
 
-.image-gallery{
+.image-gallery {
   display: grid;
   gap: 20px;
   padding-block-start: 20px;
@@ -243,22 +243,22 @@
   block-size: 100%;
 }
 
-.image-gallery__item:nth-child(1){
+.image-gallery__item:nth-child(1) {
   grid-column: span 2;
 }
-.image-gallery__item:nth-child(2){
+.image-gallery__item:nth-child(2) {
   grid-column: 3;
   grid-row: span 2;
 }
-.image-gallery__item:nth-child(3){
+.image-gallery__item:nth-child(3) {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
 }
-.image-gallery__item:nth-child(4){
+.image-gallery__item:nth-child(4) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
-.image-gallery__item:nth-child(5){
+.image-gallery__item:nth-child(5) {
   grid-column: 2 / 4;
   grid-row: 3;
 }
@@ -274,10 +274,10 @@
 }
 
 .caption {
-  color: #DB00FF;
+  color: var(--title-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--color__shadow);
 }
 
 @media (375px <= width < 1024px) {
@@ -332,7 +332,7 @@
     right: 0px;
     width: 25px;
     height: 25px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--decor__element-color);
     border-width: 1px 1px 0 0; 
   }
   
@@ -343,7 +343,7 @@
     left: 1px;
     width: 25px;
     height: 25px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--decor__element-color);
     border-width: 0 0 1px 1px;
   }
   
@@ -430,7 +430,7 @@
     left: 1px;
     width: 25px;
     height: 25px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--decor__element-color);
     border-width: 0 0 1px 1px;
   }
 
