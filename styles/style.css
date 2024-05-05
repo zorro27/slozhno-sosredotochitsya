@@ -341,11 +341,11 @@
   }
 
   .decorated-zone::after {
-    inset-block-start: 9px;
+    inset-block-start: 10px;
   }
 
   .decorated-zone::before {
-    inset-block-end: 9px;
+    inset-block-end: 10px;
   }
 
   .header__decor-element {
