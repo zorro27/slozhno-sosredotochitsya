@@ -15,7 +15,7 @@
   --color__shadow: #FF0070;
   --text-color: #353430;
   --background-color: #FFF1F7;
-  --outline-color: 1px solid rgba(53, 52, 48, 0.4);
+  --outline-color: 1px solid rgba(50, 49, 45, 0.4);
   --rec-color: transparent;
   --background-image: url(../images/cover-image-light.png);
   --menu__button-color: #353430;
@@ -31,7 +31,7 @@
     --color__shadow: #FF0070;
     --text-color: #353430;
     --background-color: #FFF1F7;
-    --outline-color: 1px solid rgba(53, 52, 48, 0.4);
+    --outline-color: 1px solid rgba(50, 49, 45, 0.4);
     --rec-color: transparent;
     --background-image: url(../images/cover-image-light.png);
     --menu__button-color: #353430;

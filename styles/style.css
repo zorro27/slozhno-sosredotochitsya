@@ -94,7 +94,7 @@
 
 .header__theme-menu-button {
   background-color: transparent;
-  padding: 0 13px 1.5px;
+  padding: 2.5px 13px 2.5px 13px;
   border: none;
   color: var(--menu__button-color);
   text-transform: lowercase;
@@ -205,7 +205,6 @@
 .title-decor-light {
   color: var(--text-negativ-color);
   background-color: var(--accent-color);
-  font-family: IBM Plex Mono;
   font-weight: 400;
   line-height: 23px;
 }
@@ -228,13 +227,8 @@
 }
 
 .picture-gallery {
-  margin-block-start: 5px;
+  margin-block-start: -20px;
   padding-block-end: 60px;
-}
-
-.picture__item-title {
-  font-weight: 700;
-  font-size: 18px;
 }
 
 .picture-image-gallery {
@@ -295,6 +289,13 @@
   text-shadow: 2px 2px 0 var(--color__shadow);
 }
 
+.article-padding {
+  margin-bottom: 15px;
+}
+.article-subtitle {
+  margin-bottom: 10px;
+}
+
 @media (375px <= width < 1024px) {
 
   .header__theme-menu {
@@ -306,8 +307,11 @@
   .header__theme-menu-list {
     grid-template-columns: none;
     align-items: center;
-    justify-content: center;
-    row-gap: 10px;
+    row-gap: 12px;
+  }
+
+  .header__theme-menu-button {
+    padding: 3px 13px 3px 13px;
   }
 
   .card-column > .card__title {
@@ -338,12 +342,10 @@
 
   .decorated-zone::after {
     inset-block-start: 9px;
-    inset-inline-end: 0px;
   }
 
   .decorated-zone::before {
     inset-block-end: 9px;
-    inset-inline-start: 1px;
   }
 
   .header__decor-element {
@@ -382,11 +384,12 @@
   }
 
   .picture-gallery {
+    margin-block-start: 0;
     padding-block-end: 40px;
   }
 
   .picture-image-gallery {
-    gap: 10px;
+    gap: 11px;
     padding-block-start: 10px;
   }
 
@@ -402,22 +405,13 @@
   .footer {
     min-block-size: 668px;
   }
+  
 }
 
 @media (768px <= width < 1024px) {
+
   .header {
     min-block-size: 1024px;
-  }
-
-  .decorated-zone::before {
-    content: "";
-    position: absolute;
-    inset-block-end: 20px;
-    inset-inline-start: 1px;
-    inline-size: 25px;
-    block-size: 25px;
-    border: 1px solid var(--decor__element-color);
-    border-width: 0 0 1px 1px;
   }
 
   .header__theme-menu {
